@@ -87,7 +87,7 @@
 
         socket.on('pesan', tambahPesan)
         function tambahPesan(pesan) {
-            $("#pesan").append(`<h4> ${pesan.nama} </h4> <p> ${pesan.pesan}</p>`)
+            $("#pesan").append(`<div class="container bg-info "><h4> ${pesan.nama} </h4> <p> ${pesan.pesan}</p></div>`)
         }
 
         function getPesan() {

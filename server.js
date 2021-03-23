@@ -71,7 +71,10 @@ io.on('connection', function (socket) {
 })
 
 mongoose.connect(dbUrl,{ useNewUrlParser: true,useUnifiedTopology: true } ,function (err) {
-    console.log(`koneksi ke mongodb berhasil ${err}`)
+    if (err)
+        console.log(`Koneksi terjadi error: ${err}`)
+    else
+        console.log(`koneksi ke mongodb berhasil`)
 })
 
 var server = http.listen(3000, function () {
